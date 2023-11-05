@@ -11,16 +11,59 @@
   </head>
 
   <body>
-    <!-- Your HTML goes here -->
-    <h1 class="display-2 text-center my-5 py-5">
-      <span class="d-block py-5">
-        <i class="bi bi-filetype-html text-primary"></i>
-        <i class="bi bi-filetype-css text-danger"></i>
-        <i class="bi bi-filetype-js text-success"></i>
-      </span>
+    <!-- container class makes the page centered horizontally -->
+    <div class="container">
+      <!-- row with one column: just the header -->
+      <div class="row col">
+        <h1>Top 10 Movies</h1>
+      </div>
 
-      Welcome to CS 2350!
-    </h1>
+      <!-- row with 2 columns: one a searchbar and one a button -->
+      <form class="row">
+        <!-- password form spanning 9 columns -->
+        <div class="col-9">
+          <input type="search" class="form-control" placeholder="Search...">
+        </div>
+        <!-- submit button spanning 2 columns -->
+        <div class="col-3">
+          <button type="button" class="btn btn-primary w-100">Search</button>
+        </div>
+      </form>
+
+      <!-- row of 2 columns: one containing the movie catalog and one containing the display. 
+        will display on top of each other by default, side-by-side on medium+.
+        has a 5px top-bottom margin -->
+      <div class="row my-5">
+        
+        <!-- the movie catalog. will span 12 columns by default, 6 (half) on medium+. -->
+        <div class="col-md-6">
+
+          <!-- the catalog will have 5 columns of movies by default, and 3 columns on medium+. -->
+          <div class="row row-cols-5 row-cols-md-3">
+            <div class="col" id="m1"></div>
+            <div class="col" id="m2"></div>
+            <div class="col" id="m3"></div>
+            <div class="col" id="m4"></div>
+            <div class="col" id="m5"></div>
+            <div class="col" id="m6"></div>
+            <div class="col" id="m7"></div>
+            <div class="col" id="m8"></div>
+            <div class="col" id="m9"></div>
+            <div class="col" id="m10"></div>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 featured">
+          Select a movie to display
+
+          
+        </div>
+
+      </div>
+
+
+    </div>
 
     <script type="module" src="./javascripts/main.js"></script>
   </body>
